@@ -8,7 +8,8 @@ import Todo from './Todo';
 
 
 function TodoList(props) {
-    return <ul>{props.todos.map(todo => <Todo todo={todo} />)}</ul>;
+  
+    return <ul>{props.todos.map((todo, index) => <Todo key = {index} todo={todo} />)}</ul>;
   }
 
   export default TodoList;

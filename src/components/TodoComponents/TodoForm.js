@@ -1,6 +1,6 @@
 import React from 'react';
 
- function todoForm(props){
+ function TodoForm(props){
     return(
         <form>
         <input value = {props.inputTodo} onChange = {props.handleInput}/>
@@ -9,4 +9,4 @@ import React from 'react';
     );
 }
 
-export default todoForm;
+export default TodoForm;

@@ -16,22 +16,27 @@ constructor(){
 }
 
 addTodo = event => {
+ 
   event.preventDefault();
-  if(this.state.inputText){
+  console.log('Input text ', this.state.inputTodo)
+  if(this.state.inputTodo){
+  
     this.setState({
-      todos:[...this.state.todos,this.state.inputTodo],
+      todos:[...this.state.todos, this.state.inputTodo],
       inputTodo:''
     });
   }
 };
 
 handleInput = event => {
+  // console.log(event.target.value)
   this.setState({
     inputTodo: event.target.value
   })
 };
 
   render() {//controlled component
+    // console.log(this.state)
     return (
       <div>
         <TodoList todos = {this.state.todos }/>
